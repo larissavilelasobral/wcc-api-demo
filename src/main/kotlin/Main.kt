@@ -26,7 +26,7 @@ fun main(){
 
         // buscar usuarios por id
         get("/users/{user-id}") { ctx ->
-            ctx.json(userDao.findById(ctx.pathParam("user-id").toInt()!!))
+            ctx.json(userDao.findById(ctx.pathParam("user-id").toInt())!!)
         }
     }
 
